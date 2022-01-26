@@ -13,9 +13,10 @@ spawning_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	planet_modifier = {
 		planet_amenities_no_happiness_add = 5
@@ -96,9 +97,10 @@ replicator = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	planet_modifier = {
 		planet_pop_assembly_add = 1
@@ -139,9 +141,10 @@ coordinator = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_bureaucrats
@@ -164,7 +167,7 @@ coordinator = {
 		potential = {
 			exists = owner
 			owner = {
-				has_swapped_tradition = tr_synchronicity_integrated_preservation
+				has_active_tradition = tr_synchronicity_integrated_preservation
 			}
 		}
 		modifier = {
@@ -176,7 +179,7 @@ coordinator = {
 		potential = {
 			exists = owner
 			owner = {
-				has_swapped_tradition = tr_synchronicity_integrated_preservation
+				has_active_tradition = tr_synchronicity_integrated_preservation
 			}
 		}
 		modifier = {
@@ -228,9 +231,10 @@ evaluator = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_evaluators
@@ -273,9 +277,10 @@ synapse_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_synapse_drones
@@ -311,7 +316,7 @@ synapse_drone = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_swapped_tradition = tr_synchronicity_instinctive_synchronization }
+			owner = { has_active_tradition = tr_synchronicity_instinctive_synchronization }
 		}
 		modifier = {
 			planet_amenities_no_happiness_add = 2
@@ -362,9 +367,10 @@ brain_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_researchers
@@ -447,9 +453,10 @@ calculator = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_researchers
@@ -528,9 +535,10 @@ artisan_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_artisans
@@ -583,9 +591,10 @@ fabricator = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_metallurgists
@@ -638,9 +647,10 @@ alloy_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_metallurgists
@@ -686,9 +696,10 @@ chemist_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_chemists
@@ -732,9 +743,10 @@ translucer_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_translucers
@@ -778,9 +790,10 @@ gas_refiner_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_refiners
@@ -824,9 +837,10 @@ patrol_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_jobs
@@ -902,9 +916,10 @@ crystal_mining_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_miners
@@ -948,9 +963,10 @@ mote_harvesting_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_miners
@@ -994,9 +1010,10 @@ gas_extraction_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_miners
@@ -1040,9 +1057,10 @@ mining_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_miners
@@ -1109,9 +1127,10 @@ agri_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_farmers
@@ -1206,9 +1225,10 @@ technician_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_technician
@@ -1297,9 +1317,10 @@ maintenance_drone = {
 		}
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	planet_modifier = {
 		planet_amenities_no_happiness_add = 4
@@ -1433,9 +1454,10 @@ warrior_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_drone_job
+
 	possible = {
-		drone_job_check_trigger = yes
-	}
+		}
 
 	weight = {
 		weight = 5
@@ -1478,7 +1500,7 @@ warrior_drone = {
 		}
 		modifier = {
 			factor = 0
-			planet = { count_pops = { limit = { } count < 12 } }
+			planet = { count_owned_pop = { limit = { } count < 12 } }
 			owner = { is_ai = yes }
 		}
 		modifier = {
@@ -1505,9 +1527,10 @@ bluelotus_drone = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_worker_job
+
 	possible = {
-		worker_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_metallurgists
@@ -1561,7 +1584,9 @@ chronicle_drone = {
 		is_being_assimilated = no
 	}
 
-	possible = { drone_job_check_trigger = yes }
+	possible_precalc = can_fill_drone_job
+
+	possible = { }
 
 	resources = {
 		category = planet_researchers

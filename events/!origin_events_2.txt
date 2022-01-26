@@ -546,8 +546,10 @@ country_event = {
 
 	trigger = {
 		has_origin = origin_galactic_doorstep
-		NOT = { has_technology = tech_gateway_construction }
-		NOT = { has_tech_option = tech_gateway_construction }
+		NOR = {
+			has_technology = tech_gateway_construction
+			has_tech_option = tech_gateway_construction
+		}
 		fromfromfrom = { has_megastructure_flag = doorstep_gateway@root }
 		NOR = {
 			has_country_flag = gateway_reactivated

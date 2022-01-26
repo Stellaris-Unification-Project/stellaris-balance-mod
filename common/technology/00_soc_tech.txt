@@ -2316,7 +2316,7 @@ tech_epigenetic_triggers = {
 			NOR = {
 				has_country_flag = found_presapients
 				any_planet_within_border = {
-					any_pop = {
+					any_owned_pop = {
 						is_sapient = no
 					}
 				}
@@ -3916,10 +3916,7 @@ tech_psionic_theory = {
 		factor = 5 #very rare tech
 		modifier = {
 			factor = 1.5
-			OR = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
-			}
+			is_spiritualist = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -4318,11 +4315,7 @@ tech_interstellar_campaigns = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			OR = {
-				has_valid_civic = "civic_fanatic_purifiers"
-				has_valid_civic = "civic_hive_devouring_swarm"
-				has_valid_civic = "civic_machine_terminator"
-			}
+			is_homicidal = yes
 		}
 		modifier = {
 			factor = 2
@@ -4380,11 +4373,7 @@ tech_galactic_campaigns = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			OR = {
-				has_valid_civic = "civic_fanatic_purifiers"
-				has_valid_civic = "civic_hive_devouring_swarm"
-				has_valid_civic = "civic_machine_terminator"
-			}
+			is_homicidal = yes
 		}
 		modifier = {
 			factor = 2
@@ -4470,10 +4459,7 @@ tech_planetary_unification = {
 		modifier = {
 			factor = 0.75
 			NOT = {
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
+				is_pacifist = yes
 			}
 		}
 	}
@@ -4483,10 +4469,7 @@ tech_planetary_unification = {
 		modifier = {
 			factor = 0.75
 			NOT = {
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
+				is_pacifist = yes
 			}
 		}
 		modifier = {
@@ -4606,10 +4589,7 @@ tech_subdermal_stimulation = {
 		factor = 0.5
 		modifier = {
 			factor = 1.25
-			NOR = {
-				has_ethic = ethic_egalitarian
-				has_ethic = ethic_fanatic_egalitarian
-			}
+			is_egalitarian = no
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -4635,10 +4615,7 @@ tech_subdermal_stimulation = {
 	ai_weight = {
 		modifier = {
 			factor = 3
-			NOR = {
-				has_ethic = ethic_egalitarian
-				has_ethic = ethic_fanatic_egalitarian
-			}
+			is_egalitarian = no
 		}
 		modifier = {
 			factor = 1.25
@@ -4917,10 +4894,7 @@ tech_living_state = {
 		}
 		modifier = {
 			factor = 1.25
-			OR = {
-				has_ethic = ethic_authoritarian
-				has_ethic = ethic_fanatic_authoritarian
-			}
+			is_authoritarian = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -4980,10 +4954,7 @@ tech_collective_self = {
 		}
 		modifier = {
 			factor = 1.5
-			OR = {
-				has_ethic = ethic_authoritarian
-				has_ethic = ethic_fanatic_authoritarian
-			}
+			is_authoritarian = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -5132,7 +5103,7 @@ tech_neural_implants = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.5
-			count_owned_pops = {
+			count_owned_pop = {
 				limit = {
 					is_enslaved = yes
 				}
@@ -5141,7 +5112,7 @@ tech_neural_implants = {
 		}
 		modifier = {
 			factor = 2
-			count_owned_pops = {
+			count_owned_pop = {
 				limit = {
 					is_enslaved = yes
 				}
@@ -5150,7 +5121,7 @@ tech_neural_implants = {
 		}
 		modifier = {
 			factor = 2
-			count_owned_pops = {
+			count_owned_pop = {
 				limit = {
 					is_enslaved = yes
 				}
@@ -5176,10 +5147,7 @@ tech_neural_implants = {
 	ai_weight = {
 		modifier = {
 			factor = 1.25
-			OR = {
-				has_ethic = ethic_authoritarian
-				has_ethic = ethic_fanatic_authoritarian
-			}
+			is_authoritarian = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -5541,8 +5509,7 @@ tech_heritage_site = {
 
 	potential = {
 		NOR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
+			is_spiritualist = yes
 			has_valid_civic = civic_machine_servitor
 		}
 	}
@@ -5588,8 +5555,7 @@ tech_hypercomms_forum = {
 
 	potential = {
 		NOR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
+			is_spiritualist = yes
 			has_valid_civic = civic_machine_servitor
 		}
 	}
@@ -5625,8 +5591,7 @@ tech_autocurating_vault = {
 
 	potential = {
 		NOR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
+			is_spiritualist = yes
 			has_valid_civic = civic_machine_servitor
 		}
 	}
@@ -5661,10 +5626,7 @@ tech_holographic_rituals = {
 	weight = @tier2weight2
 
 	potential = {
-		OR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
-		}
+		is_spiritualist = yes
 	}
 
 	weight_modifier = {
@@ -5705,10 +5667,7 @@ tech_consecration_fields = {
 	weight = @tier3weight2
 
 	potential = {
-		OR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
-		}
+		is_spiritualist = yes
 	}
 
 	weight_modifier = {
@@ -5741,10 +5700,7 @@ tech_transcendent_faith = {
 	weight = @tier4weight2
 
 	potential = {
-		OR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
-		}
+		is_spiritualist = yes
 	}
 
 	weight_modifier = {

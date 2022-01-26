@@ -3115,8 +3115,10 @@ country_event = {
 		random_country = {
 			limit = {
 				is_country_type = fallen_empire
-				NOT = { has_ethic = ethic_gestalt_consciousness }
-				NOT = { is_at_war_with = root }
+				NOR = {
+					has_ethic = ethic_gestalt_consciousness
+					is_at_war_with = root
+				}
 				has_communications = root
 			}
 			save_event_target_as = fallen_empire
@@ -5009,7 +5011,7 @@ country_event = {
 					is_colonizable = yes				
 				}
 			}
-			random_planet = {
+			random_system_planet = {
 				limit = {
 					has_owner = no
 					is_colonizable = yes
@@ -5027,7 +5029,7 @@ country_event = {
 					is_colonizable = yes				
 				}
 			}
-			random_planet = {
+			random_system_planet = {
 				limit = {
 					has_owner = no
 					is_colonizable = yes
@@ -5121,7 +5123,7 @@ country_event = {
 		every_owned_fleet = { 
 			destroy_fleet = this 
 		}		
-		every_planet = {
+		every_system_planet = {
 			limit = { has_modifier = covenant_shroud_marked }
 			remove_modifier = covenant_shroud_marked
 			remove_all_armies = yes
@@ -5942,10 +5944,7 @@ country_event = {
 		any_owned_planet = {
 			is_capital = no
 			num_pops > 5
-			NOR = {
-				is_planet_class = pc_habitat
-				is_planet_class = pc_ringworld_habitable
-			}	
+			is_artificial = no	
 		}
 	}
 	
@@ -5954,10 +5953,7 @@ country_event = {
 			limit = {
 				is_capital = no
 				num_pops > 5
-				NOR = {
-					is_planet_class = pc_habitat
-					is_planet_class = pc_ringworld_habitable
-				}
+				is_artificial = no
 			}
 			save_event_target_as = planet_target
 			change_pc = pc_shrouded
@@ -6196,7 +6192,7 @@ country_event = {
 		}
 		set_leader = event_target:chosen_one
 		hidden_effect = {
-			every_country = {
+			every_playable_country = {
 				limit = {
 					is_ai = no
 					NOT = { is_same_value = root }

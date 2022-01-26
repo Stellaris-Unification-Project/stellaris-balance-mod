@@ -45,10 +45,10 @@ ap_enigmatic_engineering = {
 ap_nihilistic_acquisition = {
 	potential = {
 		host_has_dlc = "Apocalypse"
-		NOT = {
+		NOR = {
 			has_ascension_perk = ap_nihilistic_acquisition
+			has_valid_civic = civic_barbaric_despoilers
 		}
-		NOT = { has_valid_civic = civic_barbaric_despoilers }
 	}
 
 	on_enabled = {
@@ -304,10 +304,7 @@ ap_the_flesh_is_weak = {
 		factor = 20
 		modifier = {
 			factor = 0.1
-			NOR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = no
 		}
 		modifier = {
 			factor = 0
@@ -433,10 +430,7 @@ ap_mind_over_matter = {
 		factor = 20
 		modifier = {
 			factor = 0.1
-			NOR = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
-			}
+			is_spiritualist = no
 		}
 		modifier = {
 			factor = 0
@@ -512,10 +506,10 @@ ap_world_shaper = {
 	}
 
 	potential = {
-		NOT = {
+		NOR = {
 			has_ascension_perk = ap_world_shaper
+			has_authority = auth_hive_mind
 		}
-		NOT = { has_authority = auth_hive_mind }
 		OR = {
 			NOT = { has_authority = auth_machine_intelligence }
 			has_valid_civic = civic_machine_servitor
@@ -723,10 +717,8 @@ ap_galactic_contender = {
 		}
 		any_relation = {
 			has_communications = root
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			
+				is_fallen_empire = yes
 		}
 	}
 
@@ -825,10 +817,7 @@ ap_consecrated_worlds = {
 		NOT = {
 			has_ascension_perk = ap_consecrated_worlds
 		}
-		OR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
-		}
+		is_spiritualist = yes
 	}
 
 	ai_weight = {
@@ -872,10 +861,10 @@ ap_imperial_prerogative = {
 	}
 
 	potential = {
-		NOT = {
+		NOR = {
 			has_ascension_perk = ap_imperial_prerogative
+			has_authority = auth_corporate
 		}
-		NOT = { has_authority = auth_corporate }
 	}
 
 	ai_weight = {
@@ -934,8 +923,6 @@ ap_shared_destiny = {
 			has_valid_civic = civic_inwards_perfection
 			has_valid_civic = civic_machine_terminator
 			has_authority = auth_corporate
-		}
-		NOT = {
 			has_ascension_perk = ap_shared_destiny
 		}
 	}
@@ -1325,8 +1312,8 @@ ap_arcology_project = {
 	potential = {
 		host_has_dlc = "Megacorp"
 		is_regular_empire = yes
-		NOT = { has_valid_civic = civic_agrarian_idyll }
-		NOT = {
+		NOR = {
+			has_valid_civic = civic_agrarian_idyll
 			has_ascension_perk = ap_arcology_project
 		}
 	}

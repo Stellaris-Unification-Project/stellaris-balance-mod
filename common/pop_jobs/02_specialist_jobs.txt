@@ -13,9 +13,10 @@ colonist = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_specialist_job
+
 	possible = {
-		specialist_job_check_trigger = yes
-	}
+		}
 
 	pop_modifier = {
 		pop_defense_armies_add = 1
@@ -88,7 +89,7 @@ colonist = {
 			exists = planet
 			planet = {
 				owner = { is_ai = yes }
-				count_pops = { limit = { is_sapient = yes }count < 4 }
+				count_owned_pop = { limit = { is_sapient = yes }count < 4 }
 				any_owned_pop = {
 					has_job = colonist
 				}
@@ -589,9 +590,10 @@ foundry = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_specialist_job
+
 	possible = {
-		specialist_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_metallurgists
@@ -705,7 +707,7 @@ enforcer = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_non_swapped_tradition = tr_domination_judgment_corps }
+			owner = { has_active_tradition = tr_domination_judgment_corps }
 		}
 		modifier = {
 			planet_crime_add = -10
@@ -840,9 +842,10 @@ telepath = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_specialist_job
+
 	possible = {
-		specialist_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_telepaths
@@ -876,7 +879,7 @@ telepath = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_non_swapped_tradition = tr_domination_judgment_corps }
+			owner = { has_active_tradition = tr_domination_judgment_corps }
 		}
 		modifier = {
 			planet_crime_add = -10
@@ -975,9 +978,10 @@ artisan = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_specialist_job
+
 	possible = {
-		specialist_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_artisans
@@ -1542,9 +1546,10 @@ chemist = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_specialist_job
+
 	possible = {
-		specialist_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_chemists
@@ -1602,9 +1607,10 @@ translucer = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_specialist_job
+
 	possible = {
-		specialist_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_translucers
@@ -1673,9 +1679,10 @@ gas_refiner = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_specialist_job
+
 	possible = {
-		specialist_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_refiners
@@ -1744,9 +1751,10 @@ roboticist = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_specialist_job
+
 	possible = {
-		specialist_job_check_trigger = yes
-	}
+		}
 
 	planet_modifier = {
 		planet_pop_assembly_add = 1
@@ -1776,9 +1784,10 @@ healthcare = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_specialist_job
+
 	possible = {
-		specialist_job_check_trigger = yes
-	}
+		}
 
 	planet_modifier = {
 		planet_amenities_add = 5
@@ -1859,9 +1868,10 @@ manager = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_specialist_job
+
 	possible = {
-		specialist_job_check_trigger = yes
-	}
+		}
 
 	planet_modifier = {
 		trade_value_add = 2
@@ -2017,9 +2027,10 @@ bluelotus_technician = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_worker_job
+
 	possible = {
-		worker_job_check_trigger = yes
-	}
+		}
 
 	resources = {
 		category = planet_metallurgists
@@ -2269,8 +2280,10 @@ necro_apprentice = {
 			planet = {
 				NOT = {
 					any_owned_pop = {
-						NOT = { is_same_value = root }
-						NOT = { has_job = necro_apprentice }
+						NOR = {
+							is_same_value = root
+							has_job = necro_apprentice
+						}
 						species = { species_can_be_necrophaged = yes }
 					}
 				}

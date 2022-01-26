@@ -33,10 +33,10 @@ country_event = {
 					years = 10
 				}
 				if = {
-					limit = { count_pops = { count > 4 } }
+					limit = { count_owned_pop = { count > 4 } }
 					while = {
-						limit = { count_pops = { count > 4 } }
-						random_pop = { kill_pop = yes }
+						limit = { count_owned_pop = { count > 4 } }
+						random_owned_pop = { kill_pop = yes }
 					}
 				}
 				set_owner = ROOT

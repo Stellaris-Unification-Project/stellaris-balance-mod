@@ -239,7 +239,7 @@ country_event = {
 		}
 		
 		observer_event = { id = observer.4 }
-		every_country = {
+		every_playable_country = {
 			limit = { 
 				is_ai = no 
 				NOT = { is_same_value = root }
@@ -251,10 +251,8 @@ country_event = {
 		if = {
 			limit = {
 				any_country = {
-					OR = {
-						is_country_type = fallen_empire
-						is_country_type = awakened_fallen_empire
-					}
+					
+						is_fallen_empire = yes
 					has_ethic = ethic_fanatic_spiritualist
 					has_communications = root
 					NOT = { is_same_value = root }
@@ -262,10 +260,8 @@ country_event = {
 			}
 			random_country = {
 				limit = {
-					OR = {
-						is_country_type = fallen_empire
-						is_country_type = awakened_fallen_empire
-					}
+					
+						is_fallen_empire = yes
 					has_ethic = ethic_fanatic_spiritualist
 					has_communications = root
 					NOT = { is_same_value = root }
@@ -274,7 +270,7 @@ country_event = {
 			}
 		}
 		else = {
-			random_country = {
+			random_playable_country = {
 				limit = {
 					is_country_type = default
 					has_ethic = ethic_fanatic_spiritualist

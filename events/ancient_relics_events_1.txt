@@ -25,7 +25,7 @@ ship_event = {
 		host_has_dlc = "Ancient Relics Story Pack"
 		owner = { is_ai = no }
 		solar_system = { has_star_flag = precursor_zroni_1 }
-		solar_system = { NOT = { is_same_value = root.owner.capital_scope.solar_system } }
+		solar_system = { NOT = { is_same_empire = root.owner.capital_scope.solar_system } }
 		NOT = { has_global_flag = zroni_started }
 		FROM = {
 			has_anomaly = no
@@ -139,12 +139,12 @@ fleet_event = {
 				NOR = {
 					is_same_value = root.solar_system
 					has_star_flag = first_zoroni_site@root.owner
-					is_same_value = root.owner.capital_scope.solar_system
+					is_same_empire = root.owner.capital_scope.solar_system
 					has_star_flag = hostile_system
 				}
 				OR = {
 					has_owner = no
-					owner = { is_same_value = root.owner }
+					is_owned_by = root.owner
 				}
 				any_system_planet = {
 					habitable_planet = yes
@@ -252,12 +252,12 @@ fleet_event = {
 				NOR = {
 					is_same_value = root.solar_system
 					has_star_flag = first_zoroni_site@root.owner
-					is_same_value = root.owner.capital_scope.solar_system
+					is_same_empire = root.owner.capital_scope.solar_system
 					has_star_flag = hostile_system
 				}
 				OR = {
 					has_owner = no
-					owner = { is_same_value = root.owner }
+					is_owned_by = root.owner
 				}
 				any_system_planet = {
 					habitable_planet = yes
@@ -333,12 +333,12 @@ fleet_event = {
 				NOR = {
 					is_same_value = root.solar_system
 					has_star_flag = first_zoroni_site@root.owner
-					is_same_value = root.owner.capital_scope.solar_system
+					is_same_empire = root.owner.capital_scope.solar_system
 					has_star_flag = hostile_system
 				}
 				OR = {
 					has_owner = no
-					owner = { is_same_value = root.owner }
+					is_owned_by = root.owner
 				}
 				any_system_planet = {
 					habitable_planet = yes
@@ -421,12 +421,12 @@ fleet_event = {
 				NOR = {
 					is_same_value = root.solar_system
 					has_star_flag = first_zoroni_site@root.owner
-					is_same_value = root.owner.capital_scope.solar_system
+					is_same_empire = root.owner.capital_scope.solar_system
 					has_star_flag = hostile_system
 				}
 				OR = {
 					has_owner = no
-					owner = { is_same_value = root.owner }
+					is_owned_by = root.owner
 				}
 				any_system_planet = {
 					habitable_planet = yes
