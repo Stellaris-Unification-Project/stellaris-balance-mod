@@ -211,19 +211,13 @@ opinion_xenophobes = {
 
 		modifier = {
 			add = -10
-			OR = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-			}
+			is_xenophile = yes
 			FROM = { has_ethic = "ethic_xenophobe" }
 			NOT = { is_same_species_class = FROM }
 		}
 		modifier = {
 			add = -5
-			OR = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-			}
+			is_xenophile = yes
 			FROM = { has_ethic = "ethic_xenophobe" }
 			is_same_species_class = FROM
 			NOT = { is_same_species = FROM }
@@ -232,16 +226,20 @@ opinion_xenophobes = {
 
 		modifier = {
 			add = -10
-			NOT = { has_ethic = "ethic_fanatic_xenophobe" }
-			NOT = { has_ethic = "ethic_xenophobe" }
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_xenophobe"
+			}
 			NOT = { has_civic = civic_machine_terminator }
 			FROM = { has_ethic = "ethic_xenophobe" }
 			NOT = { is_same_species_class = FROM }
 		}
 		modifier = {
 			add = -5
-			NOT = { has_ethic = "ethic_fanatic_xenophobe" }
-			NOT = { has_ethic = "ethic_xenophobe" }
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_xenophobe"
+			}
 			NOT = { has_civic = civic_machine_terminator }
 			FROM = { has_ethic = "ethic_xenophobe" }
 			is_same_species_class = FROM
@@ -251,10 +249,7 @@ opinion_xenophobes = {
 
 		modifier = {
 			add = -20
-			OR = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-			}
+			is_xenophile = yes
 			FROM = {
 				has_ethic = "ethic_fanatic_xenophobe"
 			}
@@ -263,10 +258,7 @@ opinion_xenophobes = {
 		}
 		modifier = {
 			add = -10
-			OR = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-			}
+			is_xenophile = yes
 			FROM = { has_ethic = "ethic_fanatic_xenophobe" }
 			is_same_species_class = FROM
 			NOT = { is_same_species = FROM }
@@ -275,16 +267,20 @@ opinion_xenophobes = {
 
 		modifier = {
 			add = -20
-			NOT = { has_ethic = "ethic_fanatic_xenophobe" }
-			NOT = { has_ethic = "ethic_xenophobe" }
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_xenophobe"
+			}
 			NOT = { has_civic = civic_machine_terminator }
 			FROM = { has_ethic = "ethic_fanatic_xenophobe" }
 			NOT = { is_same_species_class = FROM }
 		}
 		modifier = {
 			add = -10
-			NOT = { has_ethic = "ethic_fanatic_xenophobe" }
-			NOT = { has_ethic = "ethic_xenophobe" }
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_xenophobe"
+			}
 			NOT = { has_civic = civic_machine_terminator }
 			FROM = { has_ethic = "ethic_fanatic_xenophobe" }
 			is_same_species_class = FROM
@@ -302,10 +298,8 @@ opinion_xenophiles = {
 		modifier = {
 			add = 10
 			NOT = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-				has_ethic = "ethic_xenophobe"
-				has_ethic = "ethic_fanatic_xenophobe"
+				is_xenophile = yes
+				is_xenophobe = yes
 			}
 			FROM = { has_ethic = "ethic_xenophile" }
 			NOT = { is_same_species_class = FROM }
@@ -314,10 +308,8 @@ opinion_xenophiles = {
 		modifier = {
 			add = 20
 			NOT = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-				has_ethic = "ethic_xenophobe"
-				has_ethic = "ethic_fanatic_xenophobe"
+				is_xenophile = yes
+				is_xenophobe = yes
 			}
 			FROM = { has_ethic = "ethic_fanatic_xenophile" }
 			NOT = { is_same_species_class = FROM }
@@ -326,10 +318,8 @@ opinion_xenophiles = {
 		modifier = {
 			add = 5
 			NOT = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-				has_ethic = "ethic_xenophobe"
-				has_ethic = "ethic_fanatic_xenophobe"
+				is_xenophile = yes
+				is_xenophobe = yes
 			}
 			FROM = { has_ethic = "ethic_xenophile" }
 			is_same_species_class = FROM
@@ -338,10 +328,8 @@ opinion_xenophiles = {
 		modifier = {
 			add = 10
 			NOT = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-				has_ethic = "ethic_xenophobe"
-				has_ethic = "ethic_fanatic_xenophobe"
+				is_xenophile = yes
+				is_xenophobe = yes
 			}
 			FROM = { has_ethic = "ethic_fanatic_xenophile" }
 			is_same_species_class = FROM
@@ -351,10 +339,7 @@ opinion_xenophiles = {
 			add = 10
 			has_ethic = "ethic_xenophile"
 			FROM = {
-				OR = {
-					has_ethic = "ethic_xenophile"
-					has_ethic = "ethic_fanatic_xenophile"
-				}
+				is_xenophile = yes
 			}
 		}
 		modifier = {
@@ -442,8 +427,10 @@ opinion_xenophilia = {
 			add = 10
 			has_ethic = "ethic_xenophile"
 			is_same_species_class = FROM
-			NOT = { is_same_species = FROM }
-			NOT = { is_subspecies = FROM }
+			NOR = {
+				is_same_species = FROM
+				is_subspecies = FROM
+			}
 			FROM = {
 				NOT = {
 					has_civic = civic_machine_terminator
@@ -480,8 +467,10 @@ opinion_xenophilia = {
 			add = 20
 			has_ethic = "ethic_fanatic_xenophile"
 			is_same_species_class = FROM
-			NOT = { is_same_species = FROM }
-			NOT = { is_subspecies = FROM }
+			NOR = {
+				is_same_species = FROM
+				is_subspecies = FROM
+			}
 			FROM = {
 				NOT = {
 					has_civic = civic_machine_terminator
@@ -749,19 +738,14 @@ opinion_xenophage = {
 		modifier = {
 			add = -25
 			NOR = {
-				has_ethic = "ethic_xenophobe"
-				has_ethic = "ethic_fanatic_xenophobe"
-				has_ethic = "ethic_authoritarian"
-				has_ethic = "ethic_fanatic_authoritarian"
+				is_xenophobe = yes
+				is_authoritarian = yes
+				is_country_type = fallen_empire
 			}
-			NOT = { is_country_type = fallen_empire }
 		}
 		modifier = {
 			add = -25
-			OR = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-			}
+			is_xenophile = yes
 			NOT = { is_country_type = fallen_empire }
 		}
 		modifier = {
@@ -801,24 +785,16 @@ opinion_biophage = {
 		base = 0
 		modifier = {
 			add = -50
-			NOR = {
-				has_ethic = "ethic_xenophobe"
-				has_ethic = "ethic_fanatic_xenophobe"
-			}
+			is_xenophobe = no
 			OR = {
-				has_ethic = "ethic_egalitarian"
-				has_ethic = "ethic_fanatic_egalitarian"
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
+				is_egalitarian = yes
+				is_xenophile = yes
 			}
 			NOT = { is_country_type = fallen_empire }
 		}
 		modifier = {
 			add = -50
-			OR = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-			}
+			is_xenophile = yes
 			NOT = { is_country_type = fallen_empire }
 		}
 		modifier = {
@@ -850,46 +826,31 @@ opinion_genocidal = {
 		base = 0
 		modifier = {
 			add = -5
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 		modifier = {
 			add = -5
 			has_ethic = "ethic_egalitarian"
 			allows_purge = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 		modifier = {
 			add = -10
 			has_ethic = "ethic_fanatic_egalitarian"
 			allows_purge = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 		modifier = {
 			add = -5
 			has_ethic = "ethic_xenophile"
 			allows_purge = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 		modifier = {
 			add = -10
 			has_ethic = "ethic_fanatic_xenophile"
 			allows_purge = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 		modifier = {
 			add = -5
@@ -983,8 +944,10 @@ opinion_nuker = {
 		base = 0
 		modifier = {
 			add = -5
-			NOT = { has_ethic = "ethic_militarist" }
-			NOT = { has_ethic = "ethic_fanatic_militarist" }
+			NOR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
 			is_country_type = default
 		}
 		modifier = {
@@ -1303,17 +1266,13 @@ opinion_new_contact = {
 
 		modifier = {
 			add = 1
-			OR = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-			}
+			is_xenophile = yes
 		}
 
 		modifier = {
 			add = -1
 			OR = {
-				has_ethic = "ethic_xenophobe"
-				has_ethic = "ethic_fanatic_xenophobe"
+				is_xenophobe = yes
 			}
 		}
 	}
@@ -1385,10 +1344,8 @@ opinion_rivalry = {
 		base = -100
 		modifier = {
 			add = -100
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			
+				is_fallen_empire = yes
 		}
 	}
 
@@ -1401,10 +1358,8 @@ opinion_declared_rival = {
 		base = -100
 		modifier = {
 			add = -100
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			
+				is_fallen_empire = yes
 		}
 	}
 
@@ -1566,10 +1521,8 @@ opinion_took_station = {
 		base = -5
 		modifier = {
 			factor = 4
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			
+				is_fallen_empire = yes
 		}
 	}
 
@@ -1913,10 +1866,7 @@ opinion_primitive_violation = {
 
 		modifier = {
 			factor = 0
-			OR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
+			is_xenophobe = yes
 		}
 	}
 
@@ -2758,7 +2708,7 @@ triggered_opinion_tr_versatility_universal_compatibility = {
 	trigger = {
 		has_authority = auth_machine_intelligence
 		FROM = {
-			has_swapped_tradition = tr_versatility_universal_compatibility
+			has_active_tradition = tr_versatility_universal_compatibility
 		}
 	}
 
@@ -2945,10 +2895,8 @@ triggered_opinion_synthetics_small = {
 		is_mechanical_empire = no
 		NOR = {
 			has_authority = auth_machine_intelligence
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
-			has_ethic = ethic_materialist
-			has_ethic = ethic_fanatic_materialist
+			is_spiritualist = yes
+			is_materialist = yes
 		}
 		from = { is_mechanical_empire = yes }
 	}
@@ -2992,10 +2940,8 @@ triggered_organic_opinion_of_machine_empires = {
 		is_cyborg_empire = no
 		NOT = {
 			has_ethic = ethic_gestalt_consciousness
-			has_ethic = ethic_materialist
-			has_ethic = ethic_fanatic_materialist
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
+			is_materialist = yes
+			is_spiritualist = yes
 		}
 		FROM = {
 			has_authority = auth_machine_intelligence
@@ -3121,10 +3067,8 @@ triggered_fanatic_spiritualist_opinion_of_machine_empires = {
 
 triggered_spiritualist_fe_opinion_of_machine_empires = {
 	trigger = {
-		OR = {
-			is_country_type = awakened_fallen_empire
-			is_country_type = fallen_empire
-		}
+		
+			is_fallen_empire = yes
 		has_ethic = ethic_fanatic_spiritualist
 		is_mechanical_empire = no
 		is_cyborg_empire = no
@@ -3180,8 +3124,7 @@ triggered_spiritualist_negative_opinion_of_assimilators = {
 	trigger = {
 		is_country_type = default
 		OR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
+			is_spiritualist = yes
 		}
 		FROM = { has_civic = civic_machine_assimilator }
 	}
@@ -3194,8 +3137,7 @@ triggered_negative_opinion_of_assimilators = {
 	trigger = {
 		is_country_type = default
 		NOR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
+			is_spiritualist = yes
 			has_ethic = ethic_gestalt_consciousness
 			has_ai_personality = democratic_crusaders
 		}
@@ -3340,8 +3282,8 @@ triggered_opinion_barbaric_despoilers = {
 			is_authoritarian = yes
 			has_ethic = ethic_gestalt_consciousness
 			has_valid_civic = civic_fanatic_purifiers
+			has_civic = civic_barbaric_despoilers
 		}
-		NOT = { has_civic = civic_barbaric_despoilers }
 		FROM = { has_civic = civic_barbaric_despoilers }
 	}
 	opinion = {
@@ -3389,10 +3331,8 @@ triggered_pacifist_opinion_barbaric_despoilers = {
 
 triggered_fe_opinion_barbaric_despoilers = {
 	trigger = {
-		OR = {
-			is_country_type = awakened_fallen_empire
-			is_country_type = fallen_empire
-		}
+		
+			is_fallen_empire = yes
 		has_ethic = ethic_fanatic_xenophile
 		is_mechanical_empire = no
 		is_cyborg_empire = no

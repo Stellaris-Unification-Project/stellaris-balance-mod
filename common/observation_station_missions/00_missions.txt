@@ -203,10 +203,7 @@ native_indoctrination = {
 				has_ai_personality = democratic_crusaders
 				from = {
 					owner = {
-						NOR = {
-							has_ethic = ethic_egalitarian
-							has_ethic = ethic_fanatic_egalitarian
-						}
+						is_egalitarian = no
 					}
 				}
 			}
@@ -238,11 +235,7 @@ technological_enlightenment_0 = {
 			exists = owner
 			owner = { has_country_flag = stone_age }
 		}
-		NOR = {
-			has_valid_civic = civic_machine_terminator
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-		}
+		is_homicidal = no
 	}
 
 	valid = {
@@ -254,11 +247,7 @@ technological_enlightenment_0 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -298,11 +287,7 @@ technological_enlightenment_1 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -342,11 +327,7 @@ technological_enlightenment_2 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -386,11 +367,7 @@ technological_enlightenment_3 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -430,11 +407,7 @@ technological_enlightenment_4 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -474,11 +447,7 @@ technological_enlightenment_5 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -526,11 +495,7 @@ technological_enlightenment_6 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -578,11 +543,7 @@ technological_enlightenment_7 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -630,11 +591,7 @@ technological_enlightenment_8 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -682,11 +639,7 @@ technological_enlightenment_9 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -753,11 +706,7 @@ covert_infiltration = {
 				}
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {

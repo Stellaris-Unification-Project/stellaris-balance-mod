@@ -29,10 +29,7 @@ planet_event = {
 		add_deposit = d_buried_lithoids
 		if = {
 			limit = {
-				NOR = {
-					is_planet_class = pc_habitat
-					is_planet_class = pc_ringworld_habitable
-				}
+				is_artificial = no
 			}
 			add_deposit = d_lithoid_crater_small
 			add_modifier = { modifier = lithoid_crater2 }

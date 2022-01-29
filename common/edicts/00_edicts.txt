@@ -306,7 +306,7 @@ diplomatic_grants = {
 	}
 
 	potential = {
-		has_non_swapped_tradition = tr_diplomacy_adopt
+		has_active_tradition = tr_diplomacy_adopt
 		has_comms_with_alien_empire = yes
 	}
 
@@ -344,7 +344,7 @@ extended_shifts = {
 	}
 
 	potential = {
-		has_non_swapped_tradition = tr_domination_workplace_motivators
+		has_active_tradition = tr_domination_workplace_motivators
 	}
 
 	ai_weight = {
@@ -388,7 +388,7 @@ drone_overdrive = {
 
 	potential = {
 		is_gestalt = yes
-		has_swapped_tradition = tr_domination_drone_network
+		has_active_tradition = tr_domination_drone_network
 	}
 
 	ai_weight = {

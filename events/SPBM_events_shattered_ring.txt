@@ -15,7 +15,7 @@ event = {
 
 	trigger = {
 		years_passed >= 50
-		any_planet = {
+		any_system_planet = {
 			has_deposit = d_shattered_ring_superblocker
 			NOT = { has_planet_flag = shattered_project_given }
 		}
@@ -106,7 +106,7 @@ event = {
 
 	trigger = {
 		years_passed >= 100
-		any_planet = {
+		any_system_planet = {
 			has_deposit = d_shattered_ring_superblocker3
 			NOT = { has_planet_flag = shattered_project_given }
 		}

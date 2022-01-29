@@ -1404,8 +1404,10 @@ add_random_leader_trait = {
 				5 = {
 					if = {
 						limit = {
-							NOT = { has_trait = leader_trait_butcher }
-							NOT = { has_trait = leader_trait_restrained }
+							NOR = {
+								has_trait = leader_trait_butcher
+								has_trait = leader_trait_restrained
+							}
 						}
 						add_trait = leader_trait_butcher
 						set_timed_leader_flag = { flag = gained_leader_trait_butcher days = 7 }
@@ -3771,8 +3773,8 @@ set_all_comms_surveyed = {
 			has_communications = from
 		}
 		prev = {
-			surveyed = {
-  				set_surveyed = yes
+			set_surveyed = {
+  				surveyed = yes
    				surveyor = Prev
    			}
     	}
@@ -4566,7 +4568,7 @@ add_awakened_fallen_empire_fleet = {
 	country_event = { id = fallen_empires.13 }
 	if = {
 		limit = {
-			any_country = {
+			any_playable_country = {
 				is_country_type = default
 				OR = {
 					fleet_power > 80000
@@ -4590,7 +4592,7 @@ add_awakened_fallen_empire_fleet = {
 	}
 	if = {
 		limit = {
-			any_country = {
+			any_playable_country = {
 				is_country_type = default
 				OR = {
 					fleet_power > 150000
@@ -4614,7 +4616,7 @@ add_awakened_fallen_empire_fleet = {
 	}
 	if = {
 		limit = {
-			any_country = {
+			any_playable_country = {
 				is_country_type = default
 				OR = {
 					fleet_power > 200000
@@ -4642,7 +4644,7 @@ add_awakened_fallen_empire_fleet_small = {
 	country_event = { id = fallen_empires.13 }
 	if = {
 		limit = {
-			any_country = {
+			any_playable_country = {
 				is_country_type = default
 				OR = {
 					fleet_power > 150000
@@ -5755,16 +5757,16 @@ create_first_diadochi = {
 		}
 		# Survey Own Space
 		every_planet_within_border = {
-			surveyed = {
-				set_surveyed = yes
+			set_surveyed = {
+				surveyed = yes
 				surveyor = event_target:first_diadochi
 			}
 		}
 		# Survey Rest of Marauder's Space
 		root = {
 			every_planet_within_border = {
-				surveyed = {
-					set_surveyed = yes
+				set_surveyed = {
+					surveyed = yes
 					surveyor = event_target:first_diadochi
 				}
 			}
@@ -6035,16 +6037,16 @@ create_second_diadochi = {
 		}
 		# Survey Own Space
 		every_planet_within_border = {
-			surveyed = {
-				set_surveyed = yes
+			set_surveyed = {
+				surveyed = yes
 				surveyor = event_target:second_diadochi
 			}
 		}
 		# Survey Rest of Marauder's Space
 		root = {
 			every_planet_within_border = {
-				surveyed = {
-					set_surveyed = yes
+				set_surveyed = {
+					surveyed = yes
 					surveyor = event_target:second_diadochi
 				}
 			}
@@ -6315,16 +6317,16 @@ create_third_diadochi = {
 		}
 		# Survey Own Space
 		every_planet_within_border = {
-			surveyed = {
-				set_surveyed = yes
+			set_surveyed = {
+				surveyed = yes
 				surveyor = event_target:third_diadochi
 			}
 		}
 		# Survey Rest of Marauder's Space
 		root = {
 			every_planet_within_border = {
-				surveyed = {
-					set_surveyed = yes
+				set_surveyed = {
+					surveyed = yes
 					surveyor = event_target:third_diadochi
 				}
 			}
@@ -6595,16 +6597,16 @@ create_fourth_diadochi = {
 		}
 		# Survey Own Space
 		every_planet_within_border = {
-			surveyed = {
-				set_surveyed = yes
+			set_surveyed = {
+				surveyed = yes
 				surveyor = event_target:fourth_diadochi
 			}
 		}
 		# Survey Rest of Marauder's Space
 		root = {
 			every_planet_within_border = {
-				surveyed = {
-					set_surveyed = yes
+				set_surveyed = {
+					surveyed = yes
 					surveyor = event_target:fourth_diadochi
 				}
 			}
@@ -9044,8 +9046,10 @@ give_next_ai_tech_option_effect = {
 	}
 	else_if = {
 		limit = {
-			NOT = { has_technology = tech_sapient_ai }
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			NOR = {
+				has_technology = tech_sapient_ai
+				has_ethic = ethic_gestalt_consciousness
+			}
 		}
 		add_research_option = tech_sapient_ai
 		add_tech_progress = {
@@ -10556,8 +10560,8 @@ breach_fix_resolution_greatergood_greater_than_ourselves_no_utopia = {
 		limit = {
 			is_active_resolution = "resolution_greatergood_greater_than_ourselves"
 			in_breach_of = resolution_greatergood_greater_than_ourselves
-			NOT = { host_has_dlc = "Utopia" }
 			NOR = {
+				host_has_dlc = "Utopia"
 				has_valid_civic = civic_indentured_assets
 				has_valid_civic = civic_slaver_guilds
 			}
@@ -10867,8 +10871,10 @@ breach_fix_resolution_divinity_a_defined_purpose_machine = {
 			is_active_resolution = "resolution_divinity_a_defined_purpose"
 			in_breach_of = resolution_divinity_a_defined_purpose
 			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_machine_servitor }
-			NOT = { has_valid_civic = civic_machine_assimilator }
+			NOR = {
+				has_valid_civic = civic_machine_servitor
+				has_valid_civic = civic_machine_assimilator
+			}
 			exists = event_target:defined_purpose_random_species
 		}
 		hidden_effect = {
@@ -10893,8 +10899,10 @@ breach_fix_resolution_divinity_a_defined_purpose_machine = {
 			is_active_resolution = "resolution_divinity_a_defined_purpose"
 			in_breach_of = resolution_divinity_a_defined_purpose
 			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_machine_servitor }
-			NOT = { has_valid_civic = civic_machine_assimilator }
+			NOR = {
+				has_valid_civic = civic_machine_servitor
+				has_valid_civic = civic_machine_assimilator
+			}
 			NOT = { exists = event_target:defined_purpose_random_species }
 		}
 		hidden_effect = {

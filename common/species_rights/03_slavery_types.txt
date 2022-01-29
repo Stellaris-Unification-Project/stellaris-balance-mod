@@ -235,8 +235,7 @@ slavery_livestock = {
 			fail_text = empire_not_xenophobe
 			from = {
 				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
+					is_xenophobe = yes
 					has_ethic = ethic_gestalt_consciousness
 				}
 			}

@@ -16,11 +16,13 @@ decision_prospect = {
 
 	potential = {
 		habitable_structure = no
-		NOT = { is_planet_class = pc_machine }
-		NOT = { is_planet_class = pc_hive }
+		NOR = {
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+		}
 		NOT = { is_planet_class = pc_city }
 		owner = {
-			has_swapped_tradition = tr_adaptability_finish
+			has_active_tradition = tr_adaptability_finish
 		}
 		NOT = { has_planet_flag = planet_prospected }
 	}
@@ -75,8 +77,10 @@ decision_penal_colony = {
 
 	potential = {
 		is_capital = no
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 		owner = {
 			is_regular_empire = yes
 		}
@@ -147,10 +151,14 @@ decision_slave_colony = {
 
 	potential = {
 		is_capital = no
-		NOT = { is_planet_class = pc_city }
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = penal_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			is_planet_class = pc_city
+			has_modifier = resort_colony
+		}
+		NOR = {
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+		}
 		owner = {
 			is_regular_empire = yes
 		}
@@ -227,8 +235,10 @@ decision_resort_colony = {
 
 	potential = {
 		is_capital = no
-		NOT = { has_modifier = penal_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+		}
 		NOT = { is_planet_class = pc_city }
 		owner = {
 			is_regular_empire = yes
@@ -346,7 +356,7 @@ decision_consecrated_worlds = {
 	}
 
 	potential = {
-		space_owner = { is_same_value = from }
+		is_owned_by = from
 		from = {
 			has_ascension_perk = ap_consecrated_worlds
 		}
@@ -1460,7 +1470,7 @@ decision_lithoid_swarm_consume_world = {
 
 					if = {
 						limit = { owner = { is_ai = yes } }
-						random_pop = {
+						random_owned_pop = {
 							resettle_pop = {
 								pop = this
 								planet = owner.capital_scope
@@ -1606,8 +1616,10 @@ decision_project_cornucopia = {
 
 	potential = {
 		habitable_structure = no
-		NOT = { is_planet_class = pc_machine }
-		NOT = { is_planet_class = pc_hive }
+		NOR = {
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+		}
 		NOT = { is_planet_class = pc_city }
 		owner = {
 			is_galactic_community_member = yes
@@ -1689,8 +1701,10 @@ decision_upgrade_habitat = {
 			limit = {
 				owner = {
 					has_ascension_perk = ap_voidborn
-					NOT = { has_technology = tech_habitat_3 }
-					NOT = { has_tech_option = tech_habitat_3 }
+					NOR = {
+						has_technology = tech_habitat_3
+						has_tech_option = tech_habitat_3
+					}
 				}
 			}
 			owner = {
