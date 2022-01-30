@@ -6,6 +6,6 @@ name="Stéƒãñs®️ ρérƒæçtlÿ ßäЇåñçéd Beta"
 dependencies={
 	"~ StarNet AI"
 }
-supported_version="2.8.*"
+supported_version="3.2.2"
 path="E:/Muggins/Documents/Paradox Interactive/Stellaris/mod/stellaris-balance-mod"
 remote_file_id="2080939813"

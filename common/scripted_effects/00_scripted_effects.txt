@@ -10902,8 +10902,8 @@ breach_fix_resolution_divinity_a_defined_purpose_machine = {
 			NOR = {
 				has_valid_civic = civic_machine_servitor
 				has_valid_civic = civic_machine_assimilator
+				exists = event_target:defined_purpose_random_species
 			}
-			NOT = { exists = event_target:defined_purpose_random_species }
 		}
 		hidden_effect = {
 			if = {
